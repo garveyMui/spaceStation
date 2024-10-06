@@ -1,0 +1,121 @@
+#navigator {
+    margin: 0 auto;
+    justify-content: space-around;
+    text-align: justify;
+    color: aliceblue;
+    width: 100%;
+    height: 100px;
+    background-image: url("../images/space-starts.jpeg");
+}
+
+#container {
+    width: 100%;
+    height: 2000px;
+    background-image: url("../images/full-bg.jpg");
+    background-repeat: repeat-y;
+    /*background-image: url("../images/space-starts.jpeg");*/
+}
+
+#astronaut {
+    width: auto;
+    height: 320px;
+    position: relative;
+    left: 300px;
+    background-repeat: no-repeat;
+    background-image: url("../images/astronaut-floating.png");
+    background-size: contain;
+    text-align: center;
+}
+
+#astronaut p {
+    /*font-size: 600px;*/
+    line-height: 320px;
+}
+
+#intro-text {
+    width: 500px;
+}
+
+a:link {
+    line-height: 100px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {}
+
+a:visited {}
+
+nav.a.img {
+    width: 20px;
+    height: 20px;
+}
+
+#searchLogo {
+    width: 20px;
+    height: 20px;
+}
+
+li {
+    float: left;
+    width: 200px;
+    list-style-type: none;
+    /*display: flex;*/
+}
+
+h2 {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+#h1995 {
+    width: 100px;
+    height: 100px;
+    /*background-image: url("../images/astronaut-floating.png");*/
+    background-image: url("../images/Milestraveled-ellipse.png");
+    background-size: contain;
+}
+
+#h2020 {
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/returned-to-earth-ellipse.png");
+    background-size: contain;
+}
+#h1970 {
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../images/around-the-sun.png");
+    background-size: contain;
+}
+#h2000 {
+    width: 100px;
+    height: 100px;
+
+
+    background-image: url("../images/Orbits-on-mars-ellipse.png");
+    background-size: contain;
+}
+#h1990 {
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../images/Average-speed-ellipse.png");
+    background-size: contain;
+}
+
+#development {
+    width: auto;
+    height: 200px;
+    color: aliceblue;
+}
+
+
