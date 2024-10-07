@@ -1,3 +1,12 @@
+
+#container {
+    width: 100%;
+    height: 2000px;
+    background-image: url("../images/full-bg.jpg");
+    background-repeat: repeat-y;
+    /*background-image: url("../images/space-starts.jpeg");*/
+}
+
 #navigator {
     margin: 0 auto;
     justify-content: space-around;
@@ -8,12 +17,9 @@
     background-image: url("../images/space-starts.jpeg");
 }
 
-#container {
-    width: 100%;
-    height: 2000px;
-    background-image: url("../images/full-bg.jpg");
-    background-repeat: repeat-y;
-    /*background-image: url("../images/space-starts.jpeg");*/
+#introduction {
+    width: 500px;
+    margin: 0 150px;
 }
 
 #astronaut {
@@ -75,17 +81,25 @@ p {
     color: aliceblue;
 }
 
-#h1995 {
-    width: 100px;
-    height: 100px;
+#development {
+    width: 600px;
+    height: 200px;
+    color: aliceblue;
+    margin: 0 300px;
+}
+
+#h1950 {
+    width: 150px;
+    height: 150px;
     /*background-image: url("../images/astronaut-floating.png");*/
     background-image: url("../images/Milestraveled-ellipse.png");
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #h2020 {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-image: url("../images/returned-to-earth-ellipse.png");
     background-size: contain;
 }
@@ -112,10 +126,10 @@ p {
     background-size: contain;
 }
 
-#development {
-    width: auto;
-    height: 200px;
-    color: aliceblue;
+footer {
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(38,42,81);
 }
 
 
