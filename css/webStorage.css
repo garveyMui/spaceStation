@@ -1,9 +1,19 @@
 
+* {
+    margin: 0;
+}
+.hoisting {
+    background-image: url("../images/full-bg.jpg");
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+
+}
 #container {
     width: 100%;
     height: 2000px;
-    background-image: url("../images/full-bg.jpg");
-    background-repeat: repeat-y;
     /*background-image: url("../images/space-starts.jpeg");*/
 }
 
@@ -17,16 +27,53 @@
     background-image: url("../images/space-starts.jpeg");
 }
 
+#navigator>nav>ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#navigator>nav>ul>li {
+    /*float: left;*/
+    width: 200px;
+    list-style-type: none;
+    /*display: flex;*/
+}
+
+#navigator>nav>ul>#searchItem {
+    display: inline-block;
+    width: 40px;
+}
+
+#navigator>nav>ul>#searchItem:hover {
+    border-bottom: None;
+}
+/*#navigator>nav>ul:nth-child(5) {*/
+/*    width: 20px;*/
+/*    list-style-type: none;*/
+/*}*/
+
+#searchLogo {
+    width: 20px;
+    height: 20px;
+}
+
+#navigator>nav>ul>li:hover {
+    border-bottom: 3px solid aliceblue;
+}
+
 #introduction {
+    position: relative;
     width: 500px;
+    height: 500px;
     margin: 0 150px;
 }
 
 #astronaut {
-    width: auto;
+    width: 730px;
     height: 320px;
-    position: relative;
-    left: 300px;
+    position: absolute;
+    left: 500px;
     background-repeat: no-repeat;
     background-image: url("../images/astronaut-floating.png");
     background-size: contain;
@@ -36,10 +83,15 @@
 #astronaut p {
     /*font-size: 600px;*/
     line-height: 320px;
+    color: white;
 }
 
 #intro-text {
     width: 500px;
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    color: rgb(202,198,167);
 }
 
 a:link {
@@ -49,87 +101,166 @@ a:link {
 }
 
 a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 a:active {}
 
 a:visited {}
 
-nav.a.img {
-    width: 20px;
-    height: 20px;
-}
-
-#searchLogo {
-    width: 20px;
-    height: 20px;
-}
-
-li {
-    float: left;
-    width: 200px;
-    list-style-type: none;
-    /*display: flex;*/
-}
-
 h2 {
     color: aliceblue;
 }
 
-p {
-    color: aliceblue;
-}
-
 #development {
-    width: 600px;
-    height: 200px;
+    height: 1200px;
     color: aliceblue;
-    margin: 0 300px;
+    margin: 300px auto;
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+    background-image: url("../images/space-starts.jpeg");
+    background-size: contain;
+}
+#dev-top {
+    width: 300px;
+    margin: 100px auto;
+}
+#development table {
+    width: 300px;
+    border-width: 2px; /* 边框宽度为2px */
+    border-style: solid; /* 边框样式为实线 */
+    border-color: #333; /* 边框颜色为深灰色 */
+    border-collapse: collapse;
+}
+#development table td, #development table th {
+    border: 1px solid #333;
+}
+#dev-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dev-col {
+    position: relative;
 }
 
-#h1950 {
-    width: 150px;
-    height: 150px;
-    /*background-image: url("../images/astronaut-floating.png");*/
-    background-image: url("../images/Milestraveled-ellipse.png");
-    background-size: contain;
+.year {
+    font-size: 50px;
+}
+.milestone{
+    font-size: 10px;
+}
+.event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
     background-repeat: no-repeat;
+    position: absolute;
 }
-
-#h2020 {
-    width: 150px;
-    height: 150px;
+#event1950 {
+    background-image: url("../images/Milestraveled-ellipse.png");
+}
+#event2020 {
     background-image: url("../images/returned-to-earth-ellipse.png");
-    background-size: contain;
+    left: -100px;
+    top: 300px;
 }
-#h1970 {
-    width: 100px;
-    height: 100px;
-
+#event1970 {
     background-image: url("../images/around-the-sun.png");
-    background-size: contain;
+    top: 150px;
 }
-#h2000 {
-    width: 100px;
-    height: 100px;
-
-
+#event2000 {
     background-image: url("../images/Orbits-on-mars-ellipse.png");
-    background-size: contain;
+    top: 450px;
 }
-#h1990 {
-    width: 100px;
-    height: 100px;
-
+#event1990 {
     background-image: url("../images/Average-speed-ellipse.png");
-    background-size: contain;
+    top: 290px;
 }
-
+#event1950>.milestone {
+    color: rgb(104,87,85);
+}
+#event2020>.milestone {
+    color: rgb(86,58,69);
+}
+#event1970>.milestone {
+    color: rgb(47,66,76);
+}
+#event2000>.milestone {
+    color: rgb(25,53,90);
+}
+#event1990>.milestone {
+    color: rgb(85,25,44);
+}
 footer {
-    margin: 0 auto;
     color: white;
     background-color: rgb(38,42,81);
 }
 
+#footer-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+#footer-top {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+}
+/*#footer-top>table{*/
+/*    border-spacing: 100px 20px;*/
+/*}*/
+/*
+包含spacing
+*/
+#footer-top>table {
+    padding-top: 50px;
+    font-size: 14px;
+    text-align: left;
+}
+
+#footer-top>table td {
+    width: 250px;
+    height: 20px;
+    vertical-align: top;
+}
+#copyright {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 50px; /*容器计算高度时包括padding*/
+    text-align: center;
+    font-size: 15px;
+}
+#contact-us {
+    padding-top: 40px;
+    margin: 0 0;
+    font-size: 25px;
+}
+#contact-us form{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#contact-us textarea{
+    border-radius: 8px;
+    vertical-align: center;
+    height: 40px;
+    width: 200px;
+    margin-right: 10px;
+    resize: none;
+}
+#contact-us button{
+    border-radius: 8px;
+    vertical-align: center;
+    height: 44px;
+    width: 60px;
+    background-color: rgb(51, 110, 177);
+    color: white;
+    border: 1px solid black;
+}
 

@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>文件读取</title>
+    <title>蓝桥航天知识站</title>
     <link rel="stylesheet" href="css/webStorage.css">
 </head>
 <body>
     <div id="container">
+        <div class="hoisting">
+
+        </div>
         <div id="navigator">
             <nav>
                 <ul>
@@ -14,7 +17,7 @@
                     <li><a href="#">航天信息</a></li>
                     <li><a href="#">宇宙知识库</a></li>
                     <li><a href="#">联系我们</a></li>
-                    <li><a href="#"><img id="searchLogo" alt="searchLogo" src="images/search-icon.svg"/>搜索</a></li>
+                    <li id="searchItem"><a href="#"><img id="searchLogo" alt="searchLogo" src="images/search-icon.svg"/></a></li>
                 </ul>
             </nav>
         </div>
@@ -29,26 +32,101 @@
             </div>
         </div>
         <div id="development">
-            <div>中国太空探索历程</div>
-            <div style="width: 200px; height: 200px">
-                <div id="h1950"><p style="font-size:10px"><span style="font-size:40px">1950</span><br />成立中华人民共和国航空工业委员会</p></div>
-                <div id="h2020"><p><span style="font-size:40px">2020</span>第二次火星探测任务命名为“天问一号”</div>
+            <div id="dev-top">
+                <table>
+                    <tr>
+                        <td>2024</td>
+                        <td>中国太空探索历程</td>
+                    </tr>
+                </table>
             </div>
-            <div style="width: 200px; height: 200px; margin-left: 150px">
-                <div id="h1970"><p><span style="font-size:40px">1970</span>“东方红一号”发射成功</div>
-                <div id="h2000"><p><span style="font-size:40px">2000</span>建设“北斗”卫星导航系统</div>
-            </div>
-            <div style="width: 200px; height: 200px; margin-left: 300px">
-                <div id="h1990"><p><span style="font-size:40px">1990</span>“长征三号”运载火箭发射成功</div>
+            <div id="dev-bottom">
+                <div id="col1" class="dev-col" style="width: 200px; height: 200px">
+                    <div id="event1950" class="event">
+                        <div class="year">
+                            1950
+                        </div>
+                        <div class="milestone">
+                            成立中华人民共和国航空工业委员会
+                        </div>
+                    </div>
+                    <div id="event2020" class="event">
+                        <div class="year">
+                            2020
+                        </div>
+                        <div class="milestone">
+                            第二次火星探测任务命名为“天问一号”
+                        </div>
+                    </div>
+                </div>
+                <div id="col2" class="dev-col" style="width: 200px; height: 200px">
+                    <div id="event1970" class="event">
+                        <div class="year">
+                            1970
+                        </div>
+                        <div class="milestone">
+                            “东方红一号”发射成功
+                        </div>
+                    </div>
+                    <div id="event2000" class="event">
+                        <div class="year">
+                            2000
+                        </div>
+                        <div class="milestone">
+                            建设“北斗”卫星导航系统
+                        </div>
+                    </div>
+                </div>
+                <div id="col3" class="dev-col" style="width: 200px; height: 200px">
+                    <div id="event1990" class="event">
+                        <div class="year">
+                            1990
+                        </div>
+                        <div class="milestone">
+                            “长征三号”运载火箭发射成功
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <footer>
-        <div><a href="#">公司</a><a href="#">关于我们</a><a href="#">加入我们</a></div>
-        <div id="copyright"><p>蓝桥航天知识站
-            <br />&nbsp;Copyright 2024. 国信蓝桥版权所有</p>
+        <div id="footer-container">
+            <div id="footer-top">
+                <table>
+                    <tr>
+                        <td><a href="#">公司</a></td>
+                        <td><a href="#">空间站</a></td>
+                        <td><a href="#">空间产品</a></td>
+                        <td><a href="#">航天知识</a></td>
+                        <td rowspan="3">
+                            <div id="contact-us">
+                                <label for="email">联系我们</label>
+                                <form id="contact-container">
+                                    <textarea id="email" placeholder="请输入你的邮箱地址"></textarea>
+                                    <button>发送</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">关于我们</a></td>
+                        <td><a href="#">新闻报道</a></td>
+                        <td><a href="#">空间科学</a></td>
+                        <td><a href="#">航天任务</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">加入我们</a></td>
+                        <td><a href="#">图片与视频</a></td>
+                        <td><a href="#">空间应用</a></td>
+                        <td><a href="#">权威解读</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="copyright"><p>蓝桥航天知识站</p>
+               <p>&copy;Copyright 2024. 国信蓝桥版权所有</p>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
