@@ -3,8 +3,12 @@
     margin: 0;
 }
 .hoisting {
+    background-color: #0f131e;
     background-image: url("../images/full-bg.jpg");
-    background-repeat: no-repeat;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-attachment: scroll;
     position: fixed;
     width: 100%;
     height: 1000px;
@@ -13,33 +17,47 @@
 }
 #container {
     width: 100%;
-    height: 2000px;
-    /*background-image: url("../images/space-starts.jpeg");*/
 }
 
 #navigator {
+    padding-top: 80px;
     margin: 0 auto;
     justify-content: space-around;
     text-align: justify;
     color: aliceblue;
     width: 100%;
-    height: 100px;
-    background-image: url("../images/space-starts.jpeg");
+    position: fixed;
+    z-index: 1;
 }
 
 #navigator>nav>ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
 
 #navigator>nav>ul>li {
     /*float: left;*/
-    width: 200px;
+    padding-left: 25px;
+    padding-right: 25px;
     list-style-type: none;
+    height: 30px;
     /*display: flex;*/
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 200ms ease;
+    letter-spacing: 1px;
+    /*overflow: hidden;*/
 }
 
+#navigator>nav>ul>li:hover {
+    border-bottom: 3px solid aliceblue;
+    /*transition: box-shadow 200ms ease;*/
+}
+
+#navigator>nav>ul>li a {
+    position: relative;
+    top: -55px;
+}
 #navigator>nav>ul>#searchItem {
     display: inline-block;
     width: 40px;
@@ -58,14 +76,10 @@
     height: 20px;
 }
 
-#navigator>nav>ul>li:hover {
-    border-bottom: 3px solid aliceblue;
-}
-
 #introduction {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 1000px;
     margin: 0 150px;
 }
 
@@ -74,6 +88,7 @@
     height: 320px;
     position: absolute;
     left: 500px;
+    top: 220px;
     background-repeat: no-repeat;
     background-image: url("../images/astronaut-floating.png");
     background-size: contain;
@@ -81,16 +96,18 @@
 }
 
 #astronaut p {
-    /*font-size: 600px;*/
+    font-size: 12px;
     line-height: 320px;
     color: white;
+    position: relative;
+    left: -25px;
 }
 
 #intro-text {
     width: 500px;
     position: absolute;
     left: 150px;
-    top: 300px;
+    top: 500px;
     color: rgb(202,198,167);
 }
 
@@ -115,12 +132,13 @@ h2 {
 #development {
     height: 1200px;
     color: aliceblue;
-    margin: 300px auto;
+    margin: 0 auto;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-content: end;
     background-image: url("../images/space-starts.jpeg");
-    background-size: contain;
+    background-size: cover;
 }
 #dev-top {
     width: 300px;
@@ -128,13 +146,20 @@ h2 {
 }
 #development table {
     width: 300px;
+    height: 70px;
     border-width: 2px; /* 边框宽度为2px */
     border-style: solid; /* 边框样式为实线 */
     border-color: #333; /* 边框颜色为深灰色 */
     border-collapse: collapse;
+    text-align: center;
 }
 #development table td, #development table th {
     border: 1px solid #333;
+}
+.rotate90 {
+    transform: rotate(-90deg);
+    color: red;
+    text-align: center;
 }
 #dev-bottom {
     display: flex;
@@ -146,10 +171,11 @@ h2 {
 }
 
 .year {
-    font-size: 50px;
+    font-size: 100px;
 }
 .milestone{
-    font-size: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 .event {
     display: flex;
@@ -157,18 +183,20 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 200px;
-    height: 200px;
-    background-size: 200px 200px;
+    width: 300px;
+    height: 340px;
+    background-size: 300px 340px;
     background-repeat: no-repeat;
     position: absolute;
 }
 #event1950 {
     background-image: url("../images/Milestraveled-ellipse.png");
+    left: -100px;
+
 }
 #event2020 {
     background-image: url("../images/returned-to-earth-ellipse.png");
-    left: -100px;
+    left: -200px;
     top: 300px;
 }
 #event1970 {
@@ -177,11 +205,13 @@ h2 {
 }
 #event2000 {
     background-image: url("../images/Orbits-on-mars-ellipse.png");
-    top: 450px;
+    top: 550px;
+    left: 10px;
 }
 #event1990 {
     background-image: url("../images/Average-speed-ellipse.png");
     top: 290px;
+    left: 100px;
 }
 #event1950>.milestone {
     color: rgb(104,87,85);
@@ -224,20 +254,31 @@ footer {
     text-align: left;
 }
 
+#footer-top>table tr,
+#footer-top>table td
+{
+    height: 45px;
+}
 #footer-top>table td {
     width: 250px;
-    height: 20px;
     vertical-align: top;
+    padding: 0;
+}
+#footer-top>table td a{
+    display: block;
+    height: 100%;
+    line-height: 45px;
 }
 #copyright {
     width: 500px;
     margin: 0 auto;
-    padding-bottom: 50px; /*容器计算高度时包括padding*/
+    padding-top: 100px;
+    padding-bottom: 160px; /*容器计算高度时包括padding*/
     text-align: center;
     font-size: 15px;
 }
 #contact-us {
-    padding-top: 40px;
+    padding-top: 0;
     margin: 0 0;
     font-size: 25px;
 }
@@ -246,16 +287,18 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-#contact-us textarea{
-    border-radius: 8px;
+#contact-us [type="email"]{
+    border-radius: 12px;
     vertical-align: center;
     height: 40px;
     width: 200px;
+    font-size: 16px;
     margin-right: 10px;
     resize: none;
+    line-height: 40px;
 }
 #contact-us button{
-    border-radius: 8px;
+    border-radius: 12px;
     vertical-align: center;
     height: 44px;
     width: 60px;
