@@ -5,6 +5,7 @@ This a static web page built with HTML5 and CSS3 from scratch by myself.
 A web page which introduces space knowledge in Chinese.
 ![image](https://github.com/user-attachments/assets/c8d723db-0f76-4933-b221-fe73ca5ee3bf)
 
+![image](https://github.com/user-attachments/assets/e1114af6-ea2d-44e2-861e-bde0d6e3c2b4)
 
 # Acknowledgement
 Pictures resources are from "lanqiao.cn". It reserves all copyrights of the pictures. 
